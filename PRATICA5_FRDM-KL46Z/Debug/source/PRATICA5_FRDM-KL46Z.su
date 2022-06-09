@@ -1,0 +1,9 @@
+/home/samuel/7 Semestre/RTOS/rtos-praticas/PRATICA5_FRDM-KL46Z/drivers/fsl_clock.h:601:20:CLOCK_EnableClock	24	static
+../source/PRATICA5_FRDM-KL46Z.c:59:6:vLedsInit	8	static
+../source/PRATICA5_FRDM-KL46Z.c:71:6:vSwitchsInit	8	static
+../source/PRATICA5_FRDM-KL46Z.c:78:6:drvLedsSet	16	static
+../source/PRATICA5_FRDM-KL46Z.c:94:6:taskLed	40	static
+../source/PRATICA5_FRDM-KL46Z.c:104:5:drvButtonsSW1Pressed	8	static
+../source/PRATICA5_FRDM-KL46Z.c:111:5:drvButtonsSW2Pressed	8	static
+../source/PRATICA5_FRDM-KL46Z.c:118:6:taskButton	40	static
+../source/PRATICA5_FRDM-KL46Z.c:139:5:main	24	static

@@ -1,0 +1,9 @@
+/home/samuel/7 Semestre/RTOS/rtos-praticas/PRATICA4_FRDM-KL46Z/drivers/fsl_clock.h:601:20:CLOCK_EnableClock	24	static
+../source/PRATICA4_FRDM-KL46Z.c:19:6:highLedGreen	8	static
+../source/PRATICA4_FRDM-KL46Z.c:23:6:lowLedGreen	8	static
+../source/PRATICA4_FRDM-KL46Z.c:27:6:highLedRed	8	static
+../source/PRATICA4_FRDM-KL46Z.c:31:6:lowLedRed	8	static
+../source/PRATICA4_FRDM-KL46Z.c:35:6:vTaskLedGreen	24	static
+../source/PRATICA4_FRDM-KL46Z.c:60:6:vTaskLedRed	24	static
+../source/PRATICA4_FRDM-KL46Z.c:79:6:vApplicationIdleHook	16	static
+../source/PRATICA4_FRDM-KL46Z.c:90:5:main	16	static
