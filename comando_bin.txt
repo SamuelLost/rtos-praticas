@@ -1,0 +1,2 @@
+arm-none-eabi-size "PRATICA5_SWs_FRDM-KL46Z.axf"
+# arm-none-eabi-objcopy -v -O binary "PRATICA5_SWs_FRDM-KL46Z.axf" "PRATICA5_SWs_FRDM-KL46Z.bin"

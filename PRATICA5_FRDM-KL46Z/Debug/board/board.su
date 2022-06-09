@@ -1,2 +1,0 @@
-/home/samuel/7 Semestre/RTOS/rtos-praticas/PRATICA5_FRDM-KL46Z/drivers/fsl_clock.h:643:20:CLOCK_SetLpsci0Clock	16	static
-../board/board.c:54:6:BOARD_InitDebugConsole	16	static
