@@ -44,7 +44,7 @@
 #include "task.h"
 #include "queue.h"
 /* TODO: insert other include files here. */
-#define LED_RED 	31
+#define LED_RED 	29
 #define LED_GREEN 	5
 #define SW1			2
 #define SW2			4
