@@ -124,7 +124,7 @@ int main(void){
 	xTaskCreate(taskCPUUsage, (signed char *)"Task CPU Usage", configMINIMAL_STACK_SIZE * 4, (void *)NULL, 0, NULL);
 
 	/* create task to use CPU */
-	xTaskCreate(taskUseCPU, (signed char *)"TaskUseCPU", configMINIMAL_STACK_SIZE, (void *)NULL, 4, NULL);
+	xTaskCreate(taskUseCPU, (signed char *)"TaskUseCPU", configMINIMAL_STACK_SIZE, (void *)NULL, 1, NULL);
 
 	/* start the scheduler */
 	vTaskStartScheduler();
