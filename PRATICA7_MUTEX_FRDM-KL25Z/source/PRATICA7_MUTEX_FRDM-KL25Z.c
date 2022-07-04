@@ -24,10 +24,10 @@ void taskMsg(void *pvParameters) {
     int i;
 
     while(true) {
-//    	xSemaphoreTake(xPrinftMutex, portMAX_DELAY);
+    	xSemaphoreTake(xPrinftMutex, portMAX_DELAY);
         printf("%s\n", msg);
         PRINTF("%s\r\n", msg);
-//        xSemaphoreGive(xPrinftMutex);
+        xSemaphoreGive(xPrinftMutex);
         for (i = 0; i < 2000000; i++);
     }
 }

@@ -128,7 +128,7 @@ int main(void)
     TSI_Init(TSI0, &tsiConfig_normal);
 
     /* Set timer period */
-    LPTMR_SetTimerPeriod(LPTMR0, USEC_TO_COUNT(LPTMR_USEC_COUNT, LPTMR_SOURCE_CLOCK));
+    LPTMR_SetTimerPeriod(LPTMR0, MSEC_TO_COUNT(LPTMR_USEC_COUNT, LPTMR_SOURCE_CLOCK));
 
     NVIC_EnableIRQ(TSI0_IRQn);
     TSI_EnableModule(TSI0, true); /* Enable module */
@@ -195,6 +195,7 @@ int main(void)
     TSI_ClearStatusFlags(TSI0, kTSI_EndOfScanFlag);
     /* Select BOARD_TSI_ELECTRODE_1 as detecting electrode. */
     TSI_SetMeasuredChannelNumber(TSI0, BOARD_TSI_ELECTRODE_1);
+
     TSI_EnableModule(TSI0, true);
     LPTMR_StartTimer(LPTMR0); /* Start LPTMR triggering */
 
