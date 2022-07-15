@@ -16,14 +16,16 @@
 #include "task.h"
 #include "semphr.h"
 /* TODO: insert other definitions and declarations here. */
-
 xSemaphoreHandle xPrinftMutex;
+//TaskHandle_t taskHandler;
 
 void taskMsg(void *pvParameters) {
     char *msg = (char *)pvParameters;
     int i;
 
     while(true) {
+    	//Para desabilitar o semáforo e as mensagens ficarem embaralhadas
+    	// basta comentar as linhas referentes ao semáforo, 29 e 32.
     	xSemaphoreTake(xPrinftMutex, portMAX_DELAY);
         printf("%s\n", msg);
         PRINTF("%s\r\n", msg);
@@ -31,13 +33,13 @@ void taskMsg(void *pvParameters) {
         for (i = 0; i < 2000000; i++);
     }
 }
-TaskHandle_t taskHandler;
 /*
  * @brief   Application entry point.
  */
 int main(void) {
 
     /* Init board hardware. */
+	/* Init UART */
     BOARD_InitBootPins();
     BOARD_InitBootClocks();
     BOARD_InitBootPeripherals();
@@ -50,9 +52,9 @@ int main(void) {
     xPrinftMutex = xSemaphoreCreateMutex();
 
     /* create msg task 1 */
-    xTaskCreate(taskMsg, "TaskMsg1", configMINIMAL_STACK_SIZE * 4, (void *)"--- 0123456789 ---", 1, NULL);
+    xTaskCreate(taskMsg, "TaskString1", configMINIMAL_STACK_SIZE * 4, (void *)"--- 0123456789 ---", 1, NULL);
     /* create msg task 2 */
-    xTaskCreate(taskMsg, "TaskMsg2", configMINIMAL_STACK_SIZE * 4, (void *)"*** abcdefghij ***", 1, NULL);
+    xTaskCreate(taskMsg, "TaskString2", configMINIMAL_STACK_SIZE * 4, (void *)"*** abcdefghij ***", 1, NULL);
     /* start the scheluder */
 	vTaskStartScheduler();
 
